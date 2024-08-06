@@ -10,7 +10,7 @@ and copy the images to *ImageToPalette/*. Run *convert.py* followed by the origi
 ```
 python convert.py tokyo.jpg gruvbox_l tokyo-gruvbox_l.jpg
 ```
-Without the optional output argument, the converted image will be saved to *[original name]-[color palette].[original extension]*.
+Without the optional output argument, the converted image will be saved to *[original name]_[color palette].[original extension]*.
 
 ## Color Palettes
 Color palettes are stored in *palettes/* where the file names are the name of the palette. To create a palette file, put one hex code in each line of a file and **make sure there are no empty lines**.

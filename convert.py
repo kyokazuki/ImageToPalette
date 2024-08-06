@@ -1,5 +1,4 @@
 from PIL import Image, ImageColor, ImagePalette
-import numpy as np
 import os, sys
 from math import floor 
 
@@ -54,7 +53,7 @@ if __name__ == '__main__':
     if len(sys.argv) == 4:
         output_file = f'{sys.argv[3]}'
     else:
-        output_file = f'{os.path.splitext(sys.argv[1])[0]}-{sys.argv[2]}{os.path.splitext(sys.argv[1])[1]}'
+        output_file = f'{os.path.splitext(sys.argv[1])[0]}_{sys.argv[2]}{os.path.splitext(sys.argv[1])[1]}'
 
     image.save(output_file)
     print(f'Converted image saved to "{output_file}"!')
