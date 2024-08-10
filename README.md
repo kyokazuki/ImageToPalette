@@ -38,9 +38,9 @@ To create a palette file, put one hex code in each line of a file and ***make su
 ## Examples
 - *example.jpg*
 ![example.jpg](/example.jpg)
-- *example_kanagawa-dragon.jpg*
-![example_kanagawa-dragon.jpg](/example_kanagawa-dragon.jpg)
 - *example_everforest-dark-hard.jpg*
 ![example_everforest-dark-hard.jpg](/example_everforest-dark-hard.jpg)
 - *example_gruvbox-dark.jpg*
 ![example_gruvbox-dark.jpg](/example_gruvbox-dark.jpg)
+- *example_kanagawa-dragon.jpg*
+![example_kanagawa-dragon.jpg](/example_kanagawa-dragon.jpg)
