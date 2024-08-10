@@ -1,6 +1,10 @@
 # ImageToPalette 🎨
 A python script to convert images to your favorite color schemes.
 
+## Prerequisites
+- Python
+- Pillow (https://python-pillow.org/)
+
 ## Usage
 Clone the repository with
 ```
