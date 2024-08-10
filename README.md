@@ -19,7 +19,17 @@ Copy your images to the folder and run *convert* followed by the original file, 
 ```
 ./convert example.jpg kanagawa-dragon example_kanagawa-dragon.jpg
 ```
-Without the optional output argument, the converted image will be saved to *[original name]_[color palette].[original extension]*.
+The output file argument is optional, by default, the converted image will be saved to *[original name]_[color palette].[original extension]*.
 
 ## Color Palettes
 Color palettes are stored in *palettes/* where the file names are the name of the palette. To create a palette file, put one hex code in each line of a file and **make sure there are no empty lines**.
+
+## Examples
+- *example.jpg*
+![example.jpg](/example.jpg)
+- *example_kanagawa-dragon.jpg*
+![example_kanagawa-dragon.jpg](/example_kanagawa-dragon.jpg)
+- *example_everforest-dark-hard.jpg*
+![example_everforest-dark-hard.jpg](/example_everforest-dark-hard.jpg)
+- *example_gruvbox-dark.jpg*
+![example_gruvbox-dark.jpg](/example_gruvbox-dark.jpg)
