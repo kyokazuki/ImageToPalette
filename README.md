@@ -12,7 +12,7 @@ chmod +x convert
 ```
 Copy your images to the folder and run *convert* followed by the original file, color palette and the output. Example: 
 ```
-./convert *example.jpg* *kanagawa-dragon* *example_kanagawa-dragon.jpg*
+./convert example.jpg kanagawa-dragon example_kanagawa-dragon.jpg
 ```
 Without the optional output argument, the converted image will be saved to *[original name]_[color palette].[original extension]*.
 
