@@ -2,7 +2,7 @@
 A python script to convert images to your favorite color schemes.
 
 ## Prerequisites
-This script utilizes the python library Pillow for image processing.
+This script utilizes the python library Pillow for image processing. Please make sure the packages below are installed.
 - Python
 - Pillow (https://python-pillow.org/)
 
