@@ -1,14 +1,18 @@
 # ImageToPalette
-A simple python script using PIL to convert images to suit a color palette.
+A python script to convert images to your favorite color schemes.
 
 ## Usage
 Clone the repository with
 ```
 git clone https://github.com/kyokazuki/ImageToPalette
 ```
-and copy the images to *ImageToPalette/*. Run *convert.py* followed by the original file name, color palette and the output name. Example: 
+and make the script executable with
 ```
-python convert.py example.jpg gruvbox-l example_gruvbox-l.jpg
+chmod +x convert
+```
+Copy your images to the folder and run *convert* followed by the original file, color palette and the output. Example: 
+```
+./convert *example.jpg* *kanagawa-dragon* *example_kanagawa-dragon.jpg*
 ```
 Without the optional output argument, the converted image will be saved to *[original name]_[color palette].[original extension]*.
 
