@@ -27,6 +27,7 @@ Color palettes are stored in *palettes/* where the file names are the name of th
 - [Everforest](https://github.com/sainnhe/everforest)
 - [Gruvbox](https://github.com/morhetz/gruvbox)
 - [Kanagawa](https://github.com/rebelot/kanagawa.nvim)
+- [TokyoNight](https://github.com/folke/tokyonight.nvim)
 
 To create a palette file, put one hex code in each line of a file and ***make sure there are no empty lines***. For example, the contents of a palette file that recolors to black and white would be:
 ```
