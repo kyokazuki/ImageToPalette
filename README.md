@@ -1,4 +1,4 @@
-# ImageToPalette
+# ImageToPalette 🎨
 A python script to convert images to your favorite color schemes.
 
 ## Usage
