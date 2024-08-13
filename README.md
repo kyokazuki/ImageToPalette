@@ -15,14 +15,14 @@ and make the script executable with
 ```
 chmod +x convert
 ```
-Copy your images to the folder and run *convert* followed by the original file, color palette and the output. Example: 
+Copy your images to the folder and run ``convert`` followed by the original file, color palette and the output. Example: 
 ```
 ./convert example.jpg kanagawa-dragon example_kanagawa-dragon.jpg
 ```
-The output file argument is optional, by default, the converted image will be saved to *[original name]_[color palette].[original extension]*.
+The output file argument is optional, by default, the converted image will be saved to ``[original name]_[color palette].[original extension]``.
 
 ## Color Palettes
-Color palettes are stored in *palettes/* where the file names are the name of the palette. Currently includes color schemes from:
+Color palettes are stored in ``palettes/`` where the file names are the name of the palette. Currently includes color schemes from:
 - [Catppuccin](https://github.com/catppuccin/catppuccin)
 - [Everforest](https://github.com/sainnhe/everforest)
 - [Gruvbox](https://github.com/morhetz/gruvbox)
@@ -36,11 +36,11 @@ To create a palette file, put one hex code in each line of a file and ***make su
 ```
 
 ## Examples
-- *example.jpg*
+- ``example.jpg``
 ![example.jpg](/example.jpg)
-- *example_everforest-dark-hard.jpg*
+- ``example_everforest-dark-hard.jpg``
 ![example_everforest-dark-hard.jpg](/example_everforest-dark-hard.jpg)
-- *example_gruvbox-dark.jpg*
+- ``example_gruvbox-dark.jpg``
 ![example_gruvbox-dark.jpg](/example_gruvbox-dark.jpg)
-- *example_kanagawa-dragon.jpg*
+- ``example_kanagawa-dragon.jpg``
 ![example_kanagawa-dragon.jpg](/example_kanagawa-dragon.jpg)
