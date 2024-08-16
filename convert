@@ -2,9 +2,11 @@
 
 from PIL import Image, ImageColor, ImagePalette
 import os, sys
-from math import floor 
+from math import floor, sqrt 
+from time import time
 
-if __name__ == '__main__':
+def main():
+    start_time = time()
     # check arguments
     if len(sys.argv) != 3 and len(sys.argv) != 4:
         print('Invalid number of arguments!')
@@ -14,7 +16,7 @@ if __name__ == '__main__':
         print(f'Image "{sys.argv[1]}" does not exist!')
         quit()
 
-    if os.path.isfile(f'palettes/{sys.argv[2]}') != True:
+    if os.path.isfile(f'palettes/{sys.argv[2]}.py') != True:
         print(f'Palette "{sys.argv[2]}" does not exist!')
         quit()
 
@@ -25,15 +27,13 @@ if __name__ == '__main__':
     pxl_map = image.load()
 
     # import palette in RGB
-    palette_file = open(f'palettes/{sys.argv[2]}', 'r')
-    palette_hex = palette_file.read().splitlines()
-
+    palette_hex = __import__(f'palettes.{sys.argv[2]}', globals(), locals(), ['palette'], 0).palette
     palette_rgb = []
     for i in palette_hex:
         palette_rgb.append(ImageColor.getrgb(i))
 
     # replace pixels with color from palette
-    def Distance(a, b):
+    def distance(a, b):
         d = 0
         for i in range(3):
             d += (a[i]-b[i])**2
@@ -44,12 +44,13 @@ if __name__ == '__main__':
         for y in range(image.size[1]):
             pxl = image.getpixel((x, y))
             d_min = 3*255**2
-            for i, j in enumerate(palette_rgb):
-                d = Distance(pxl, j)
-                if d < d_min:
-                    d_min = d
-                    pxl_map[x, y] = j
+            for rgb in palette_rgb:
+                d_new = distance(pxl, rgb)
+                if d_new < d_min:
+                    d_min = d_new
+                    pxl_map[x, y] = rgb
         print(f'Converting... {floor(x*(image.size[1]+1)*100/size)}%', end='\r', flush=True)
+    print(f'Converting... Done!({round(time()-start_time, 1)}s)')
 
     # save output
     if len(sys.argv) == 4:
@@ -58,5 +59,8 @@ if __name__ == '__main__':
         output_file = f'{os.path.splitext(sys.argv[1])[0]}_{sys.argv[2]}{os.path.splitext(sys.argv[1])[1]}'
 
     image.save(output_file)
-    print(f'Converted image saved to "{output_file}"!')
+    print(f'Converted image saved to "{output_file}"')
+
+if __name__ == '__main__':
+    main()
 

@@ -1,0 +1,26 @@
+# Kanagawa Dragon
+# https://github.com/rebelot/kanagawa.nvim/blob/master/lua/kanagawa/colors.lua
+palette = [
+    '#0d0c0c',
+    '#12120f',
+    '#181616',
+    '#2D4F67',
+    '#8a9a7b',
+    '#8ba4b0',
+    '#8ea4a2',
+    '#938AA9',
+    '#a292a3',
+    '#a6a69c',
+    '#b6927b',
+    '#b98d7b',
+    '#c4746e',
+    '#c4b28a',
+    '#c5c9c5',
+    '#C8C093',
+    '#E46876',
+    '#E6C384',
+    '#72A7BC',
+    '#7AA89F',
+    '#7FB4CA',
+    '#87a987',
+]
