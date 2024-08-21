@@ -1,6 +1,6 @@
 # ImageToPalette :art:
 A python script to convert images to your favorite color schemes.
-Some nice wallpapers created with this tool are in ![wallpapers/](/wallpapers).
+Some nice wallpapers created with this tool are in [wallpapers/](/wallpapers).
 
 ## Prerequisites
 This script utilizes the python library Pillow for image processing. Make sure the packages below are installed.
