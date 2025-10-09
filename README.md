@@ -1,4 +1,4 @@
-# ImageToPalette :art:
+# :art: ImageToPalette
 A python script to convert images to your favorite color schemes.
 Some nice wallpapers created with this tool are in [wallpapers/](/wallpapers).
 
@@ -47,3 +47,4 @@ palette = [
 ![example_gruvbox-dark.jpg](/example_gruvbox-dark.jpg)
 - example_kanagawa-dragon.jpg
 ![example_kanagawa-dragon.jpg](/example_kanagawa-dragon.jpg)
+
