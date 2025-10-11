@@ -1,5 +1,24 @@
+# Images
 *.jpg
 *.png
 !example*
 !wallpapers/**
 
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# UV package management
+uv.lock
+.python-version
+pyproject.toml
+
+# Virtual environments
+.venv
+
+# Secrets
+.env

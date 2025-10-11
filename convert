@@ -38,17 +38,28 @@ def main():
         for i in range(3):
             d += (a[i]-b[i])**2
         return d
+    
+    # make b have the brightness of a
+    def adjust_brightness(a, b):
+        target_brightness = sqrt(a[0]**2 + a[1]**2 + a[2]**2)
+        if target_brightness == 0:
+            return (0, 0, 0,)
+        current_brightness = sqrt(b[0]**2 + b[1]**2 + b[2]**2)
+        ratio = target_brightness / current_brightness
+        return tuple([round(min(channel * ratio, 255)) for channel in b])
 
     size = image.size[0]*image.size[1]
     for x in range(image.size[0]):
         for y in range(image.size[1]):
             pxl = image.getpixel((x, y))
             d_min = 3*255**2
+            best_rgb = palette_rgb[0]
             for rgb in palette_rgb:
                 d_new = distance(pxl, rgb)
                 if d_new < d_min:
                     d_min = d_new
-                    pxl_map[x, y] = rgb
+                    best_rgb = rgb
+            pxl_map[x, y] = adjust_brightness(pxl, best_rgb)
         print(f'Converting... {floor(x*(image.size[1]+1)*100/size)}%', end='\r', flush=True)
     print(f'Converting... Done!({round(time()-start_time, 1)}s)')
 
